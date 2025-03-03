@@ -1,0 +1,31 @@
+version: '3.8'
+services:
+  app:
+    build: .
+    container_name: challenge_one-api
+    restart: unless-stopped
+    working_dir: /var/www
+    volumes:
+      - .:/var/www/html
+    depends_on:
+      - db
+    environment:
+      - APP_ENV=local
+      - DB_HOST=db
+
+  db:
+    image: mysql:8
+    container_name: challenge_one-db
+    restart: unless-stopped
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_DATABASE: challenge_one
+      MYSQL_USER: user
+      MYSQL_PASSWORD: challenge_one
+    ports:
+      - "3306:3306"
+    volumes:
+      - dbdata:/var/lib/mysql
+
+volumes:
+  dbdata:

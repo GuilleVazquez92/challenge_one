@@ -1,0 +1,164 @@
+{
+    "info": {
+      "_postman_id": "your-unique-id",
+      "name": "IDESA API Collection",
+      "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+    },
+    "item": [
+      {
+        "name": "Register User",
+        "request": {
+          "method": "POST",
+          "header": [
+            { "key": "Content-Type", "value": "application/json" },
+            { "key": "Accept", "value": "application/json" }
+          ],
+          "body": {
+            "mode": "raw",
+            "raw": "{\n    \"name\": \"Test User\",\n    \"email\": \"test@example.com\",\n    \"password\": \"password\",\n    \"password_confirmation\": \"password\"\n}"
+          },
+          "url": { "raw": "{{base_url}}/api/register", "host": ["{{base_url}}"], "path": ["api", "register"] }
+        }
+      },
+      {
+        "name": "Login User",
+        "request": {
+          "method": "POST",
+          "header": [
+            { "key": "Content-Type", "value": "application/json" },
+            { "key": "Accept", "value": "application/json" }
+          ],
+          "body": {
+            "mode": "raw",
+            "raw": "{\n    \"email\": \"user@idesa.com\",\n    \"password\": \"idesa123\"\n}"
+          },
+          "url": { "raw": "{{base_url}}/api/login", "host": ["{{base_url}}"], "path": ["api", "login"] }
+        }
+      },
+      {
+        "name": "Logout User",
+        "request": {
+          "method": "POST",
+          "header": [
+            { "key": "Content-Type", "value": "application/json" },
+            { "key": "Accept", "value": "application/json" },
+            { "key": "Authorization", "value": "Bearer {{token}}" }
+          ],
+          "url": { "raw": "{{base_url}}/api/v1/logout", "host": ["{{base_url}}"], "path": ["api", "v1", "logout"] }
+        }
+      },
+      {
+        "name": "Get Authors",
+        "request": {
+          "method": "GET",
+          "header": [
+            { "key": "Authorization", "value": "Bearer {{token}}" },
+            { "key": "Accept", "value": "application/json" }
+          ],
+          "url": { "raw": "{{base_url}}/api/v1/authors", "host": ["{{base_url}}"], "path": ["api", "v1", "authors"] }
+        }
+      },
+      {
+        "name": "Create Author",
+        "request": {
+          "method": "POST",
+          "header": [
+            { "key": "Content-Type", "value": "application/json" },
+            { "key": "Accept", "value": "application/json" },
+            { "key": "Authorization", "value": "Bearer {{token}}" }
+          ],
+          "body": {
+            "mode": "raw",
+            "raw": "{\n    \"name\": \"New Author\",\n    \"birthdate\": \"1990-01-01\",\n    \"nationality\": \"USA\"\n}"
+          },
+          "url": { "raw": "{{base_url}}/api/v1/authors", "host": ["{{base_url}}"], "path": ["api", "v1", "authors"] }
+        }
+      },
+      {
+        "name": "Update Author",
+        "request": {
+          "method": "PUT",
+          "header": [
+            { "key": "Content-Type", "value": "application/json" },
+            { "key": "Accept", "value": "application/json" },
+            { "key": "Authorization", "value": "Bearer {{token}}" }
+          ],
+          "body": {
+            "mode": "raw",
+            "raw": "{\n    \"name\": \"Updated Author Name\",\n    \"birthdate\": \"1985-05-15\",\n    \"nationality\": \"UK\"\n}"
+          },
+          "url": { "raw": "{{base_url}}/api/v1/authors/1", "host": ["{{base_url}}"], "path": ["api", "v1", "authors", "1"] }
+        }
+      },
+      {
+        "name": "Delete Author",
+        "request": {
+          "method": "DELETE",
+          "header": [
+            { "key": "Authorization", "value": "Bearer {{token}}" },
+            { "key": "Accept", "value": "application/json" }
+          ],
+          "url": { "raw": "{{base_url}}/api/v1/authors/1", "host": ["{{base_url}}"], "path": ["api", "v1", "authors", "1"] }
+        }
+      },
+      {
+        "name": "Get Books",
+        "request": {
+          "method": "GET",
+          "header": [
+            { "key": "Authorization", "value": "Bearer {{token}}" },
+            { "key": "Accept", "value": "application/json" }
+          ],
+          "url": { "raw": "{{base_url}}/api/v1/books", "host": ["{{base_url}}"], "path": ["api", "v1", "books"] }
+        }
+      },
+      {
+        "name": "Create Book",
+        "request": {
+          "method": "POST",
+          "header": [
+            { "key": "Content-Type", "value": "application/json" },
+            { "key": "Accept", "value": "application/json" },
+            { "key": "Authorization", "value": "Bearer {{token}}" }
+          ],
+          "body": {
+            "mode": "raw",
+            "raw": "{\n    \"title\": \"New Book\",\n    \"isbn\": \"123456789\",\n    \"author_id\": 1\n}"
+          },
+          "url": { "raw": "{{base_url}}/api/v1/books", "host": ["{{base_url}}"], "path": ["api", "v1", "books"] }
+        }
+      },
+      {
+        "name": "Update Book",
+        "request": {
+          "method": "PUT",
+          "header": [
+            { "key": "Content-Type", "value": "application/json" },
+            { "key": "Accept", "value": "application/json" },
+            { "key": "Authorization", "value": "Bearer {{token}}" }
+          ],
+          "body": {
+            "mode": "raw",
+            "raw": "{\n    \"title\": \"Updated Book Title\",\n    \"isbn\": \"987654321\",\n    \"author_id\": 1\n}"
+          },
+          "url": { "raw": "{{base_url}}/api/v1/books/1", "host": ["{{base_url}}"], "path": ["api", "v1", "books", "1"] }
+        }
+      },
+      {
+        "name": "Delete Book",
+        "request": {
+          "method": "DELETE",
+          "header": [
+            { "key": "Authorization", "value": "Bearer {{token}}" },
+            { "key": "Accept", "value": "application/json" }
+          ],
+          "url": { "raw": "{{base_url}}/api/v1/books/1", "host": ["{{base_url}}"], "path": ["api", "v1", "books", "1"] }
+        }
+      }
+    ],
+    "variable": [
+      { "key": "base_url", "value": "http://127.0.0.1:8000" },
+      { "key": "token", "value": "" }
+    ]
+  }
+  
