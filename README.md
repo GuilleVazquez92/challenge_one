@@ -6,6 +6,11 @@
 - **Errors:** https://github.com/GuilleVazquez92/challenge_one/wiki/Errors
 - **Filters:** https://github.com/GuilleVazquez92/challenge_one/wiki/Filters
 
+## Credenciales para login
+- **User:** user@idesa.com
+- **Password:** idesa123
+
+**Nota:** Puede generar de igual manera nuevos usuarios con la ruta register de la API 
 
 ## Requisitos
 Para ejecutar este proyecto necesitas:
