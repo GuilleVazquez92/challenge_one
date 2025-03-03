@@ -50,6 +50,11 @@ Para probar la API con Postman:
 - **Docker:** Última versión estable
 - **Postman:** Última versión estable
 
-## Notas adicionales
+## Documentacion de la API
+- **Home:** https://github.com/GuilleVazquez92/challenge_one/wiki
+- **API End Points:** https://github.com/GuilleVazquez92/challenge_one/wiki/API-End-Points
+- **Errors:** https://github.com/GuilleVazquez92/challenge_one/wiki/Errors
+- **Filters:** https://github.com/GuilleVazquez92/challenge_one/wiki/Filters
+
 
 
