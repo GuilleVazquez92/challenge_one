@@ -1,5 +1,12 @@
 # Proyecto Challenge One API
 
+## Documentacion de la API
+- **Home:** https://github.com/GuilleVazquez92/challenge_one/wiki
+- **API End Points:** https://github.com/GuilleVazquez92/challenge_one/wiki/API-End-Points
+- **Errors:** https://github.com/GuilleVazquez92/challenge_one/wiki/Errors
+- **Filters:** https://github.com/GuilleVazquez92/challenge_one/wiki/Filters
+
+
 ## Requisitos
 Para ejecutar este proyecto necesitas:
 - **PHP** >= 8.2
@@ -49,12 +56,5 @@ Para probar la API con Postman:
 - **MySQL:** 8 (contenedor Docker)
 - **Docker:** Última versión estable
 - **Postman:** Última versión estable
-
-## Documentacion de la API
-- **Home:** https://github.com/GuilleVazquez92/challenge_one/wiki
-- **API End Points:** https://github.com/GuilleVazquez92/challenge_one/wiki/API-End-Points
-- **Errors:** https://github.com/GuilleVazquez92/challenge_one/wiki/Errors
-- **Filters:** https://github.com/GuilleVazquez92/challenge_one/wiki/Filters
-
 
 
